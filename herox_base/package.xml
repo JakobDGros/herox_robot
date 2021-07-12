@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>herox_base</name>
+  <version>0.1.0</version>
+  <description>Main package for HEROX AMR.</description>
+
+  <maintainer email="bernhard.vorhofer@tum.de">Bernhard Vorhofer</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>herox_control</exec_depend>
+  <exec_depend>herox_description</exec_depend>
+
+  <export>
+  </export>
+</package>

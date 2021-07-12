@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>herox_robot</name>
+  <version>0.1.0</version>
+  <description>Metapackage for packages running on the HEROX AMR.</description>
+
+  <maintainer email="bernhard.vorhofer@tum.de">Bernhard Vorhofer</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>herox_base</exec_depend>
+
+  <export>
+  </export>
+</package>
