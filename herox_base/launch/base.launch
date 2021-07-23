@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <launch>
+  <!-- Publish URDF -->
   <include file="$(find herox_description)/launch/description.launch" />
+
+  <!-- CANOpen motor controller driver -->
+  <node name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true" launch-prefix="">
+    <rosparam command="load" file="$(find herox_base)/config/driver.yaml" />
+  </node>
 
   <!-- Not implemented yet -->
   <!-- <node pkg="herox_base" type="herox_node" name="herox_node" output="screen" /> -->
