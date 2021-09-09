@@ -47,6 +47,10 @@
      <param name="use_persistent_config"  type="bool"   value="False" />
   </node>
 
+  <!-- Relay laser scan topics -->
+  <node pkg="topic_tools" type="relay" name="front_laser_relay" args="/laser_BX1/scan /front/scan" />
+  <node pkg="topic_tools" type="relay" name="rear_laser_relay" args="/laser_BX2/scan /rear/scan" />
+
   <!-- Not implemented yet -->
   <!-- <node pkg="herox_base" type="herox_node" name="herox_node" output="screen" /> -->
 
