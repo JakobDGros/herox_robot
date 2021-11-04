@@ -7,7 +7,7 @@ sync:
 #    rate: 1000
 #    msg: "708#05"
 defaults:
-    eds_pkg: herox_control
+    eds_pkg: herox_base
     eds_file: "config/roboteq_motor_controllers_v60.eds"
     #switching_state: 4
     #pos_to_device: "rint(rad2deg(pos)*1000)" # rad -> mdeg
