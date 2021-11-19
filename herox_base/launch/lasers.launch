@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- SICK laser scanner driver -->
+  <node pkg="sick_safetyscanners" type="sick_safetyscanners_node" name="laser_BX1" output="screen" ns="laser_BX1">
+     <param name="sensor_ip"              type="string" value="192.168.1.3" />
+     <param name="host_ip"                type="string" value="192.168.1.101" />
+     <param name="host_udp_port"          type="int"    value="0" />
+     <param name="frame_id"               type="string" value="front_laser" />
+     <param name="skip"                   type="int"    value="1" />
+     <param name="angle_start"            type="double" value="-1.9" />
+     <param name="angle_end"              type="double" value="1.9" />
+     <param name="time_offset"            type="double" value="0.0" />
+     <param name="min_intensities"        type="double" value="0.0" />
+     <param name="channel_enabled"        type="bool"   value="True" />
+     <param name="general_system_state"   type="bool"   value="True" />
+     <param name="derived_settings"       type="bool"   value="True" />
+     <param name="measurement_data"       type="bool"   value="True" />
+     <param name="intrusion_data"         type="bool"   value="True" />
+     <param name="application_io_data"    type="bool"   value="True" />
+     <param name="use_persistent_config"  type="bool"   value="False" />
+  </node>
+
+  <node pkg="sick_safetyscanners" type="sick_safetyscanners_node" name="laser_BX2" output="screen" ns="laser_BX2">
+     <param name="sensor_ip"              type="string" value="192.168.1.4" />
+     <param name="host_ip"                type="string" value="192.168.1.101" />
+     <param name="host_udp_port"          type="int"    value="0" />
+     <param name="frame_id"               type="string" value="rear_laser" />
+     <param name="skip"                   type="int"    value="1" />
+     <param name="angle_start"            type="double" value="-1.9" />
+     <param name="angle_end"              type="double" value="1.9" />
+     <param name="time_offset"            type="double" value="0.0" />
+     <param name="min_intensities"        type="double" value="0.0" />
+     <param name="channel_enabled"        type="bool"   value="True" />
+     <param name="general_system_state"   type="bool"   value="True" />
+     <param name="derived_settings"       type="bool"   value="True" />
+     <param name="measurement_data"       type="bool"   value="True" />
+     <param name="intrusion_data"         type="bool"   value="True" />
+     <param name="application_io_data"    type="bool"   value="True" />
+     <param name="use_persistent_config"  type="bool"   value="False" />
+  </node>
+
+  <!-- Relay laser scan topics to unified /scan topic-->
+  <node pkg="topic_tools" type="relay" name="front_laser_relay" args="/laser_BX1/scan /scan" />
+  <node pkg="topic_tools" type="relay" name="rear_laser_relay" args="/laser_BX2/scan /scan" />
+</launch>
