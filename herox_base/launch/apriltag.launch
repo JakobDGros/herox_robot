@@ -9,7 +9,11 @@
   <rosparam command="load" file="$(find herox_base)/config/apriltag_settings.yaml" ns="$(arg node_namespace)" />
   <rosparam command="load" file="$(find herox_base)/config/apriltag_tags.yaml" ns="$(arg node_namespace)" />
 
-  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <arg name="color_width" value="1280"/>
+    <arg name="color_height" value="720"/>
+    <arg name="enable_depth" value="false"/>
+  </include>
   <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
     <!-- Remap topics from those used in code to those on the ROS network --> 
     <remap from="image_rect" to="$(arg camera_name)/$(arg image_topic)" />

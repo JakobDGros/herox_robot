@@ -12,11 +12,11 @@
      <param name="time_offset"            type="double" value="0.0" />
      <param name="min_intensities"        type="double" value="0.0" />
      <param name="channel_enabled"        type="bool"   value="True" />
-     <param name="general_system_state"   type="bool"   value="True" />
+     <param name="general_system_state"   type="bool"   value="False" />
      <param name="derived_settings"       type="bool"   value="True" />
      <param name="measurement_data"       type="bool"   value="True" />
-     <param name="intrusion_data"         type="bool"   value="True" />
-     <param name="application_io_data"    type="bool"   value="True" />
+     <param name="intrusion_data"         type="bool"   value="False" />
+     <param name="application_io_data"    type="bool"   value="False" />
      <param name="use_persistent_config"  type="bool"   value="False" />
   </node>
 
@@ -31,11 +31,11 @@
      <param name="time_offset"            type="double" value="0.0" />
      <param name="min_intensities"        type="double" value="0.0" />
      <param name="channel_enabled"        type="bool"   value="True" />
-     <param name="general_system_state"   type="bool"   value="True" />
+     <param name="general_system_state"   type="bool"   value="False" />
      <param name="derived_settings"       type="bool"   value="True" />
      <param name="measurement_data"       type="bool"   value="True" />
-     <param name="intrusion_data"         type="bool"   value="True" />
-     <param name="application_io_data"    type="bool"   value="True" />
+     <param name="intrusion_data"         type="bool"   value="False" />
+     <param name="application_io_data"    type="bool"   value="False" />
      <param name="use_persistent_config"  type="bool"   value="False" />
   </node>
 
