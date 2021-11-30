@@ -11,4 +11,7 @@
 
   <!-- Mecanum controller -->
   <include file="$(find herox_control)/launch/control.launch" />
+
+  <!-- Teleop node -->
+  <include file="$(find herox_control)/launch/teleop.launch" />
 </launch>
