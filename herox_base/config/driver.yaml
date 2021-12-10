@@ -1,7 +1,7 @@
 bus:
     device: can0
 sync:
-    interval_ms: 100
+    interval_ms: 133
     overflow: 0
 #heartbeat:
 #    rate: 1000
