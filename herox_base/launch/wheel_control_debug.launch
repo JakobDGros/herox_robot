@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- Load velocity controllers to allow individual wheel control -->
+<!-- Self-sufficient launchfile, publishes URDF  -->
 <launch>
   <!-- Publish URDF -->
   <include file="$(find herox_description)/launch/description.launch" />
@@ -9,5 +10,5 @@
     <rosparam command="load" file="$(find herox_base)/config/driver.yaml" />
   </node>
   <!-- Velocity controller -->
-  <include file="$(find herox_control)/launch/control_vel.launch" />
+  <include file="$(find herox_control)/launch/wheel_debug_control.launch" />
 </launch>
